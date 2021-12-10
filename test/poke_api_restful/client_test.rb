@@ -2,7 +2,7 @@
 
 require './test/test_helper'
 
-class ClientTest < MiniTest::Test
+class PokeApiRestful::ClientTest < MiniTest::Test
   def client
     Client.new
   end

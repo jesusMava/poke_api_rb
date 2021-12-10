@@ -7,3 +7,8 @@ gemspec
 
 gem 'minitest', '~> 5.14', '>= 5.14.4'
 gem 'rake', '~> 12.0'
+
+group :test do
+  gem 'vcr'
+  gem "webmock"
+end
