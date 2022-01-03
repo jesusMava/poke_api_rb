@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PokeApiRestful
   class BaseApi
     def initialize
@@ -5,16 +7,16 @@ module PokeApiRestful
     end
 
     def get_all_pokemons
-     pokemons = client.get_pokemon('') do |uri|
+      pokemons = client.get_pokemon('') do |uri|
         Net::HTTP::Get.new(uri)
       end
 
-     list_pokemon = pokemons[:results].map { |e| e[:name] }
-     individual_pok = list_pokemon.map do |pokemon|
-       Thread.new do
-         client.get_pokemon(pokemon) 
-       end
-     end
+      list_pokemon = pokemons[:results].map { |e| e[:name] }
+      list_pokemon.map do |pokemon|
+        Thread.new do
+          client.get_pokemon(pokemon)
+        end
+      end
     end
 
     def count

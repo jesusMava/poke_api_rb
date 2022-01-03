@@ -10,5 +10,5 @@ gem 'rake', '~> 12.0'
 
 group :test do
   gem 'vcr'
-  gem "webmock"
+  gem 'webmock'
 end

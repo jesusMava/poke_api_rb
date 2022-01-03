@@ -2,8 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/poke_api_restful`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
-
+Simple gem to know how work net::http in ruby and use threads 
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,8 +20,9 @@ Or install it yourself as:
     $ gem install poke_api_restful
 
 ## Usage
-
-TODO: Write usage instructions here
+* `PokeApiRestful::Client.new.get_pokemon(pokemon_name)` if you want to see one specific pokemon
+* `PokeApiRestful::BaseApi.new.get_all_pokemons` if you want to see some request with threads
+* `PokeApiRestful::BaseApi.new.count` show a num of pokemons
 
 ## Development
 
